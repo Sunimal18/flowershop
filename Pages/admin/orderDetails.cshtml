@@ -1,0 +1,31 @@
+﻿@page
+@model myStore.Pages.admin.orderDetailsModel
+@{
+}
+<h1>List of Customer Booking</h1>
+<table class="table" style="background-color:#eef07d">
+	<thead>
+		<tr>
+			<th>Booking ID</th>
+			<th>Date</th>
+			<th>Quantity</th>
+			<th>Flower name</th>
+			<th>Customer name</th>
+
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.listorder)
+		{
+			<tr>
+				<td>@item.b_id</td>
+				<td>@item.date</td>
+				<td>@item.quantity</td>
+				<td>@item.f_name</td>
+				<td>@item.c_name</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

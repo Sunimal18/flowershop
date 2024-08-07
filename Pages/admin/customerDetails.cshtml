@@ -1,0 +1,31 @@
+﻿@page
+@model myStore.Pages.admin.customerDetailsModel
+@{
+}
+
+<h1>List of Registered Customers</h1>
+<table class="table" style="background-color:#eef07d">
+	<thead>
+		<tr>
+			<th>Customer ID</th>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Telephone</th>
+			<th>Email</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.listcustomer)
+		{
+			<tr>
+				<td>@item.c_id</td>
+				<td>@item.c_name</td>
+				<td>@item.address</td>
+				<td>@item.tel</td>
+				<td>@item.email</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

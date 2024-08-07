@@ -1,0 +1,43 @@
+﻿@page
+@model myStore.Pages.login.adminModel
+@{
+}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="background-color:#eef07d">
+                    <h3>Login</h3>
+                    <p>Don't have an account? <a href="/customer/register">Register here</a></p>
+                </div>
+                <div class="card-body" style="background-color:#eef07d">
+                    <form method="POST">
+                        <br />
+                        <br />
+                        <br />
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username" name="username">
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password">
+                        </div>
+                        <br />
+                        <input type="submit" class="btn btn-primary" value="Login" />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

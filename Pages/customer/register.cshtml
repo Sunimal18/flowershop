@@ -1,0 +1,71 @@
+﻿@page
+@model myStore.Pages.customer.registerModel
+@{
+}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Registration</h3>
+                </div>
+                @if (Model.errorMessage.Length > 0)
+                {
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert"> 
+                        <strong>@Model.errorMessage</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                    </div>
+                }
+                <div class="card-body" style="background-color:#eef07d">
+                    <form method="post" style="background-color:#eef07d">
+                        <div class="form-group">
+                            <label for="customerName">Customer Name</label>
+                            <input type="text" class="form-control" id="customerName" placeholder="Enter your name" name="name"value="@Model.customerDetail.c_name">
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address" value="@Model.customerDetail.address">
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="phoneNumber">Telephone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your telephone number" name="tel" value="@Model.customerDetail.tel">
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email address" name="email" value="@Model.customerDetail.email">
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" value="@Model.customerDetail.password">
+                        </div>
+                        @if (Model.successfullMessage.Length > 0)
+                        {
+                            <div class="row mb-3">
+                                <div class="col-sm-9">
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>@Model.successfullMessage</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        }
+                        <br />
+                        <button type="reset" class="btn btn-dark">Cancel</button>
+                        <input type="submit" value="Submit" class="btn btn-primary" /> 
+                        <br />
+                        <br />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
